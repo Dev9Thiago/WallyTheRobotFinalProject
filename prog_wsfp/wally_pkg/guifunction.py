@@ -3,13 +3,19 @@ from stmch import *
 from tkinter import *
 from tkinter import ttk
 
+# Creation of the window
+
 window = Tk()
 window.title("Wally the Recycler Robot")
+
+# Creation of the first frame
 
 frame_a = ttk.Frame(window)
 frame_a.grid(column=0, row=0)
 window.columnconfigure(0, weight=1)
 window.rowconfigure(0, weight=1)
+
+# Creation of the test buttons for each use scenario, all of them are part of the first frame
 
 ttk.Button(frame_a, text="Se suelta un objeto de la garra del robot", command=case1).grid(column=0, row=0)
 ttk.Button(frame_a, text="Se mueve un objeto y este resulta tumbado al tratar de agarrarlo", command=case2).grid(column=1, row=0)
@@ -25,21 +31,17 @@ ttk.Button(frame_a, text="La cámara se desconectó y no hay imágenes", command
 ttk.Button(frame_a, text="El robot no logra recoger un objeto luego de varios minutos", command=case12).grid(column=2, row=3)
 ttk.Button(frame_a, text="La AI cambia la categoria del objeto", command=case13).grid(column=1, row=4)
 
+# Creation of the second frame
+
 frame_b = ttk.Frame()
 frame_b.grid(column=0, row=5)
+
+# Creation of the message box and button to show the state of the robot, this one being part of the second frame
 
 def state():
     robotstate = robot.state
     messagebox.showinfo(title="Robot's State", message = robotstate)
 
-#for i in range(13):
-#    robotstate = StringVar()
-#    robotstate.set(robot.state)
-
-#robotstate = StringVar()
-#robotstate.set(robot.state)
-
-#ttk.Label(frame_b, text="The current state of the robot is: ").grid(column=0, row=5)
 ttk.Button(frame_b, text="Click here to view the current state of the robot", command=state).grid(column=1, row=5)
 
 window.mainloop()
