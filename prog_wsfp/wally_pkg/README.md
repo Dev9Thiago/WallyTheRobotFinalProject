@@ -22,3 +22,7 @@ The "guifunction.py" file controls the interface used to control the robot and t
 # Libraries used
 
 The main library used is the "transitions" library, which allows the state machine work as intended.
+
+# GUI Implementation
+
+The path used for the creation of the GUI was a minimalistic one, the interface contains a group of buttons, each button triggers an event related to a change to the robot's state, the goal of this is to simulate possible scenarios that the robot can encounter in a real life situation, there is also a message button that shows in which state the robot is currently on.
