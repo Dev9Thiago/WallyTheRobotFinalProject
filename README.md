@@ -21,7 +21,7 @@ The "guifunction.py" file controls the interface used to control the robot and t
 
 # Libraries used
 
-The main library used is the "transitions" library, which allows the state machine work as intended.
+The libraries used for this project are the "transitions" library, which allows the state machine work as intended, and the "tkinter" library, which is responsible of the correct operation of the GUI module.
 
 # GUI Implementation
 
