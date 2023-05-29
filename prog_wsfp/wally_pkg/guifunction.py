@@ -1,3 +1,5 @@
+# Import of the needed libraries and modules
+
 from tkinter import messagebox
 from stmch import *
 from tkinter import *
