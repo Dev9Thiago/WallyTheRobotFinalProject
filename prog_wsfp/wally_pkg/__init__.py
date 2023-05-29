@@ -1,3 +1,5 @@
+# Main module for the class diagram designed in UML
+
 __all__ = ["AI", "Cámara", "Wally", "Container", "Terreno", "Zona", "RobotActivity", "Claw", "Movimiento", "Item", "Area"]
 
 from .AI import AI
