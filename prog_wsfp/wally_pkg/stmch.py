@@ -1,13 +1,14 @@
-from transitions import Machine
+# Import of the needed libraries and modules
 
+from transitions import Machine
 from Wally import *
 
 robot = Wally
 
-# The states
+# Creation of the different states for the robot
 states=['power_on', 'idle', 'area_reached', 'robot_stuck', 'recollect_mode', 'camera_offline', 'claw_full', 'object_dropped', 'item_analized', 'filling_container', 'object_changed', 'area_cleaned', 'sudden_stop']
 
-# Transitions between states (possible real use cases)
+# Creation of the transitions between states (possible real use cases)
 transitions = [
     { 'trigger': 'startbutton', 'source': 'power_on', 'dest': 'idle' },
     { 'trigger': 'continuebutton', 'source': 'idle', 'dest': 'area_reached' },
@@ -31,7 +32,7 @@ transitions = [
 # Initialize
 machine = Machine(robot, states=states, transitions=transitions, initial='power_on')
 
-#Cases
+# Use cases
 
 def case1(*args):
     machine.set_state('claw_full')
